@@ -1,0 +1,14 @@
+{
+  "name": "WorldBorder",
+  "author": "brainsynder",
+
+  "version": 0.2,
+  "supported-build": 163,
+
+  "description": [
+    "&7This addon hooks into",
+    "&7WorldBorder so you can",
+    "&7stop specific pet events from",
+    "&7occurring when outside of borders"
+  ]
+}

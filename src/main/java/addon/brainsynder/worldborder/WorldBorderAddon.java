@@ -1,21 +1,18 @@
 package addon.brainsynder.worldborder;
 
-import com.google.common.collect.Lists;
 import com.wimbli.WorldBorder.BorderData;
 import com.wimbli.WorldBorder.Config;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.plugin.Plugin;
-import simplepets.brainsynder.addon.presets.RegionAddon;
+import simplepets.brainsynder.addon.presets.RegionModule;
 import simplepets.brainsynder.api.Namespace;
 import simplepets.brainsynder.api.plugin.SimplePets;
 import simplepets.brainsynder.api.user.PetUser;
 import simplepets.brainsynder.debug.DebugLevel;
 
-import java.util.List;
-
 @Namespace(namespace = "WorldBorder")
-public class WorldBorderAddon extends RegionAddon {
+public class WorldBorderAddon extends RegionModule {
 
     @Override
     public boolean shouldEnable() {
@@ -32,29 +29,6 @@ public class WorldBorderAddon extends RegionAddon {
         BorderData border = Config.Border(location.getWorld().getName());
         if (border == null) return true; // No World Border data
         return border.insideBorder(location);
-    }
-
-    @Override
-    public double getVersion() {
-        return 0.1;
-    }
-
-    @Override
-    public String getAuthor() {
-        return "brainsynder";
-    }
-
-    @Override
-    public List<String> getDescription() {
-        return Lists.newArrayList(
-                "&7This addon hooks into",
-                "&7WorldBorder so you can",
-                "&7stop specific pet events from",
-                "&7occurring when outside of borders",
-                "&r ",
-                "&cNOT FULLY TESTED any issues report",
-                "&cthem on discord https://pluginwiki.us/discord/"
-        );
     }
 
     @Override
